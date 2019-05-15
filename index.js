@@ -29,8 +29,8 @@ function splitQuestion(text){
 
 app.use(cors())
 
-// app.get('/', (req, res) => res.send('Use o endpoint /charada'))
 app.get('/', (req, res) => fetchQuestion().then(r => res.send(r)))
+app.get('/charada', (req, res) => res.send('Charada'))
 
 app.listen(port, () => console.log(`App listening on port ${port}!`))
 
